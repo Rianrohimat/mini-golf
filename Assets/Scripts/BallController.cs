@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using Cinemachine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+
 public class BallController : MonoBehaviour
 {
 
@@ -12,11 +16,20 @@ public class BallController : MonoBehaviour
 	public GameObject arrowStem;
 
     public Camera MainCamera;
-
+    [SerializeField] LineRenderer aimLine;
+    [SerializeField] Transform aimWorld;
+    bool shoot;
+    bool shootingMode;
+    float forceFactor;
+    Vector3 forceDirection;
+    Ray ray;
+    Plane plane;
     void Start()
     {
         arrowHead = GameObject.Find("arrowHead");
 		arrowStem = GameObject.Find("arrowStem");
+       
+        
     }
 
     void Update()
@@ -110,7 +123,7 @@ public class BallController : MonoBehaviour
     {
         if (GetComponent<Rigidbody>().velocity.z == 0)
         {
-            if (zForce < 2250) {
+            if (zForce < 2000) {
 			    zForce += 25;
 		    }
         }
@@ -191,6 +204,7 @@ public class BallController : MonoBehaviour
         zForce = 0;
 
     }
+    
 	
 	void OnGUI()
     {

@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour {
     public static int hole1 = 0;
     public static int hole2 = 0;
     public static int hole3 = 0;
+    public static int hole4 = 0;
+    public static int hole5 = 0;
+    public static int hole6 = 0;
+    public static int hole7 = 0;
+    public static int hole8 = 0;
+    public static int hole9 = 0;
     public static int maxStrokes = 15;
     public static int strokes = maxStrokes;
     public Text curStrokes;
@@ -84,6 +90,102 @@ public class GameManager : MonoBehaviour {
                     break;
                 case DifficultyManager.Difficulties.hard:
                     par = 2;
+                    break;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "hole4")
+        {
+            currentHole = hole4;
+            switch (DifficultyManager.Difficulty)
+            {
+                case DifficultyManager.Difficulties.easy:
+                    par = 5;
+                    break;
+                case DifficultyManager.Difficulties.normal:
+                    par = 4;
+                    break;
+                case DifficultyManager.Difficulties.hard:
+                    par = 3;
+                    break;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "hole5")
+        {
+            currentHole = hole5; ;
+            switch (DifficultyManager.Difficulty)
+            {
+                case DifficultyManager.Difficulties.easy:
+                    par = 5;
+                    break;
+                case DifficultyManager.Difficulties.normal:
+                    par = 4;
+                    break;
+                case DifficultyManager.Difficulties.hard:
+                    par = 3;
+                    break;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "hole6")
+        {
+            currentHole = hole6;
+            switch (DifficultyManager.Difficulty)
+            {
+                case DifficultyManager.Difficulties.easy:
+                    par = 4;
+                    break;
+                case DifficultyManager.Difficulties.normal:
+                    par = 3;
+                    break;
+                case DifficultyManager.Difficulties.hard:
+                    par = 2;
+                    break;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "hole7")
+        {
+            currentHole = hole7;
+            switch (DifficultyManager.Difficulty)
+            {
+                case DifficultyManager.Difficulties.easy:
+                    par = 5;
+                    break;
+                case DifficultyManager.Difficulties.normal:
+                    par = 4;
+                    break;
+                case DifficultyManager.Difficulties.hard:
+                    par = 3;
+                    break;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "hole8")
+        {
+            currentHole = hole8;
+            switch (DifficultyManager.Difficulty)
+            {
+                case DifficultyManager.Difficulties.easy:
+                    par = 4;
+                    break;
+                case DifficultyManager.Difficulties.normal:
+                    par = 3;
+                    break;
+                case DifficultyManager.Difficulties.hard:
+                    par = 2;
+                    break;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "hole9")
+        {
+            currentHole = hole9;
+            switch (DifficultyManager.Difficulty)
+            {
+                case DifficultyManager.Difficulties.easy:
+                    par = 5;
+                    break;
+                case DifficultyManager.Difficulties.normal:
+                    par = 4;
+                    break;
+                case DifficultyManager.Difficulties.hard:
+                    par = 3;
                     break;
             }
         }
